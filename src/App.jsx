@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
 import { add, divide, multiply, subtract } from './utils/math';
+import Todo from './components/todo';
+
 
 function App() {
   const [counter, setCounter] = useState(2);
@@ -44,33 +46,34 @@ function App() {
     setResult(subtract(a, b));
   };
 
-  return (
-    <div className="container">
-      <h1>Counter: {counter}</h1>
-      <button type="button" onClick={handleCounter}>
-        count
-      </button>
+  // return (
+  //   <div className="container">
+  //     <h1>Counter: {counter}</h1>
+  //     <button type="button" onClick={handleCounter}>
+  //       count
+  //     </button>
 
-      <div>
-        <h1>Calculator</h1>
-        <input type="number" name="a" ref={inputARef} />
-        <input type="number" name="b" ref={inputBRef} />
-        <button type="button" onClick={handleAdd}>
-          Add
-        </button>
-        <button type="button" onClick={handleMultiply}>
-          Multiply
-        </button>
-        <button type="button" onClick={handleDivide}>
-          Divide
-        </button>
-        <button type="button" onClick={handleSubtract}>
-          Subtract
-        </button>
-        <h2>Result: {result}</h2>
-      </div>
-    </div>
-  );
+  //     <div>
+  //       <h1>Calculator</h1>
+  //       <input type="number" name="a" ref={inputARef} />
+  //       <input type="number" name="b" ref={inputBRef} />
+  //       <button type="button" onClick={handleAdd}>
+  //         Add
+  //       </button>
+  //       <button type="button" onClick={handleMultiply}>
+  //         Multiply
+  //       </button>
+  //       <button type="button" onClick={handleDivide}>
+  //         Divide
+  //       </button>
+  //       <button type="button" onClick={handleSubtract}>
+  //         Subtract
+  //       </button>
+  //       <h2>Result: {result}</h2>
+  //     </div>
+  //   </div>
+  // );
+  return <Todo/>
 }
 
 export default App;
